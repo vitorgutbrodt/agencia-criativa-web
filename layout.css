@@ -1,0 +1,30 @@
+.container-um { /* container do código todo para organização com grid */
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main aside"
+    "footer footer footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+
+main {
+    grid-area: main;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.home__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 1em;
+    margin: 2em;
+}

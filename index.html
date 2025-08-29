@@ -5,56 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Criativa Web</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="layout.css">
 </head>
 <body>
     <div class="container-um"> <!-- container geral para o primeiro grid -->
-        <header>             
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Sobre Nós</li>
-                    <li>Serviços</li>
-                    <li>Depoimentos</li>
-                    <li>Contato</li>
+        <header class="home__area">             
+            <nav class="home__menu">
+                <ul class="home__lista">
+                    <li class="home__lista--item">Home</li>
+                    <li class="home__lista--item">Sobre Nós</li>
+                    <li class="home__lista--item">Serviços</li>
+                    <li class="home__lista--item">Depoimentos</li>
+                    <li class="home__lista--item">Contato</li>
                 </ul>
             </nav>  
-            <section>
+            <section class="home__banner">
             <!-- HOME -->
-            <img src="banner.png">
+            <img src="banner.png" class="home__banner--img">
             </section>          
         </header>
     
-        <main>      
+        <main class="main">      
             <section>
-                <h2>Sobre Nós</h2>            
+                <h2 class="main__titulo">Sobre Nós</h2>            
                 <p>Somos uma agência especializada em sites, design e marketing digital, que se concentra na criação de identidade visual e sites modernos, baseados em conversão de resultados.</p>
-                <button>SAIBA MAIS</button>
+                <button class="main__button">SAIBA MAIS</button>
             </section>
 
             <section>
-                <h2>Serviços</h2>
-                <div class="container-dois"> <!-- container para organização dos servidos -->
-                    <div>
+                <h2 class="main__titulo">Serviços</h2>
+                <div class="main__serviços"> <!-- container para organização dos serviços -->
+                    <div class="main__serviços--item">
                         <h3>Branding</h3>
                         <p>Criação de logotipo, estratégia, conceito e planejamento de branding, naming, redesign de marca e identidade visual.</p>
                     </div>
-                    <div>
+                    <div class="main__serviços--item">
                         <h3>Criação</h3>
                         <p>Materiais gráficos e digitais, papelaria, revistas, anúncios para mídia online e offline.</p>
                     </div>
-                    <div>
+                    <div class="main__serviços--item">
                         <h3>Desenvolvimento Web</h3>
                         <p>Criação de sites responsivos, hotsites promocionais e blogs corporativos.</p>
                     </div>
-                    <div>
+                    <div class="main__serviços--item">
                         <h3>Impressão Gráfica</h3>
                         <p>Impressão gráfica e promocional: entregamos seu projeto pronto com qualidade, segurança e menor custo.</p>
                     </div>
-                    <div>
+                    <div class="main__serviços--item">
                         <h3>Marketing Digital</h3>
                         <p>Gestão de mídias sociais, GoogleAds, tráfego pago, FacebookAds, e-mail marketing, publicidade em portais e links patrocinados.</p>
                     </div>
-                    <div>
+                    <div class="main__serviços--item">
                         <h3>Promocional</h3>
                         <p>Marketing promocional para ações internas e externas, como: brindes, uniformes, displays, vitrines e embalagens.</p>
                     </div>
@@ -62,17 +63,17 @@
             </section>
 
             <section>
-                <h2>Depoimentos</h2>
-                <div class="container-tres"> <!-- container para especificação do div para não se confundir com os dos serviços -->
-                    <div>
+                <h2 class="main__titulo">Depoimentos</h2>
+                <div class="main__depoimentos"> <!-- container para especificação do div para não se confundir com os dos serviços -->
+                    <div class="main__depoimentos--item">
                         <h5>Fulano da Silva</h5>
                         <p>Sempre podemos contar com a entrega antes do prazo!</p>
                     </div>
-                    <div>
+                    <div class="main__depoimentos--item">
                     <h5>Ciclano de Souza</h5>
                         <p>Muito atenciosos e profissionais, sempre a disposição!</p>
                     </div>
-                    <div>
+                    <div class="main__depoimentos--item">
                         <h5>Beltrano de Lima</h5>
                         <p>A melhor do ramo na atualidade!</p>
                     </div>
@@ -80,24 +81,23 @@
             </section>
 
             <section>
-                <h2>Contato</h2>                
+                <h2 class="main__titulo">Contato</h2>                
                 <p>Nos envie uma mensagem!</p>
                 <p>Podemos ajudar a escolher a melhor opção para você e seu negócio!</p>
                 
-                <form>                
-                    <input type="text" placeholder="Nome Completo">
-                    <input type="text" placeholder="Email">
-                    <div class="container-quatro">
-                        <input type="text" placeholder="Mensagem"><br>
-                    </div>
-                    <button>ENVIAR</button>                
+                <form class="main__form">                
+                    <input type="text" placeholder="Nome Completo" class="main__input">
+                    <input type="text" placeholder="Email" class="main__input">
+                    <input type="text" placeholder="Mensagem" class="main__input--mensagem">
+                    
+                    <button class="main__button">ENVIAR</button>                
                 </form>
             </section>
         </main>
 
-        <footer>
+        <footer class="home__area">
             <section>
-                <div class="container-cinco">
+                <div class="home__footer">
                     <div>
                         <h3>Endereço</h3>
                         <p>Rua dos Bobos, Número 0</p>

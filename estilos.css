@@ -7,48 +7,36 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.container-um { /* container do código todo para organização com grid */
-    display: grid;
-    grid-template-areas: 
-    "header header header header"
-    "sidebar main main aside"
-    "footer footer footer footer";
-    min-height: 100vh;
-}
-
-header {
-    grid-area: header;
+.home__area {    
     text-align: center;
     background-color: #3800f2;
     color: white;
 }
 
-body header nav ul li {
+.home__lista--item {
     display: inline-flex;
     font-size: 1.5em;
     padding: 0.5em;   
 }
 
-body header section img {
+/* aqui tive que manter do jeito antigo */ 
+/* não consegui identificar porque mas quando usei BEM a imagem começou a alterar o tamanho */
+/* deixei o jeito que tinha feito no html, tinha usado .home__banner como class para editar */
+header section img {
     max-width: 100%;
     height: auto;
 }
 
-body header nav ul li:hover {
+.nav__lista--item:hover {
     text-decoration: underline;
     text-decoration-color: aqua;
 }
 
-main {
-    grid-area: main;
-    text-align: center;
-}
-
-body main h2 {
+.main__titulo {
     margin: 1em;
 }
 
-.container-dois div {
+.main__serviços--item {
     border: 0.1em solid gray;
     border-radius: 0.5em;
     box-shadow: 0.1em 0.1em;
@@ -57,7 +45,7 @@ body main h2 {
     font-size: 1rem;
 }
 
-body main section button {
+.main__button {
     background-color: #3800f2;
     color: white;
     font-weight: bold;
@@ -69,12 +57,12 @@ body main section button {
     font-size: 1em;
 }
 
-body main section button:hover {
+.main__button:hover {
     background-color: aqua;
     border-color: aqua;
 }
 
-.container-tres div {
+.main__depoimentos--item {
     border: 0.1em solid gray;
     border-radius: 0.5em;
     box-shadow: 0.1em 0.1em;
@@ -83,30 +71,25 @@ body main section button:hover {
     font-size: 1rem;
 }
 
-footer {
-    grid-area: footer;
-    background-color: #3800f2;
-    color: white;
-    text-align: center;
+.main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
 
-.container-cinco {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin-bottom: 1em;
-    margin: 2em;
+.main__input, .main__input--mensagem {
+    text-align: center;
 }
 
 /* celulares */
 @media (max-width: 600px) {
-   body header nav ul li {
-        display: inline-flex;
-        font-size: 1em;
-        padding: 0.5em;   
+   .home__lista--item {
+    display: inline-flex;
+    font-size: 1em;
+    padding: 0.5em;   
     }
    
-    .container-dois {
+    .main__serviços {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -114,34 +97,35 @@ footer {
         margin: 10px; 
     }
 
-    body main section button {
+    .main__button {
         width: 50%;        
     }
 
-    body main section input {
+    .main__input {
         margin: 0.5em;
         width: 80%;
-        height: 2rem;
-        text-align: center;    
+        height: 2rem;            
     }
 
-    .container-quatro input {
+    .main__input--mensagem {
+        margin: 0.5em;
+        width: 80%;
         height: 4rem;
     }
 
-    .container-cinco {
+    .home__footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         margin-bottom: 1em;
         margin: 2em;
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 }
 
 /* tablets */ 
 @media (min-width: 601px) and (max-width: 900px){
-    .container-dois {
+    .main__serviços {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -149,27 +133,28 @@ footer {
         margin: 10px; 
     }
 
-    .container-tres div {
+    .main__depoimentos--item {
         margin-left: 10%;
         margin-right: 10%;
         padding: 0.5em;
     }
 
-    body main section input {
+    .main__input {
         margin: 0.5em;
         width: 70%;
-        height: 2rem;
-        text-align: center;    
+        height: 2rem;          
     }
 
-    .container-quatro input {
+    .main__input--mensagem {
+        margin: 0.5em;
+        width: 70%;
         height: 4rem;
     }
 }
 
 /* desktop */
 @media (min-width: 901px) {
-   .container-dois {
+   .main__serviços {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -177,21 +162,22 @@ footer {
         margin: 10px; 
     }
 
-    .container-tres div {
+    .main__depoimentos--item {
         margin-left: 20%;
         margin-right: 20%;
         padding: 1em;
     }
 
-    body main section input {
+    .main__input {
         margin: 0.5em;
         width: 50%;
-        height: 2rem;
-        text-align: center;    
+        height: 2rem;          
     }
 
-    .container-quatro input {
+    .main__input--mensagem {
         height: 5rem;
+        margin: 0.5em;
+        width: 50%;
     }
 
 }
