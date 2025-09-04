@@ -1,0 +1,68 @@
+@use 'variaveis';
+@use 'mixins';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home {    
+    &__area {
+        text-align: center;
+        background-color: variaveis.$cor-primaria;
+        color: white;
+    }
+
+    &__lista--item {
+        display: inline-flex;
+        font-size: 1.5em;
+        padding: calc(variaveis.$espacamento-padrao / 2); 
+    }
+
+    &__lista--item:hover {
+        text-decoration: underline;
+        text-decoration-color: variaveis.$cor-selecao;
+    }
+}
+
+.main {
+    &__titulo {
+        margin: variaveis.$margem-padrao;
+    }
+
+    &__servicos--item {
+        @include mixins.div-arredondada;
+    }
+
+    &__button {
+        @include mixins.botao;
+    }
+
+    &__button:hover {
+        background-color: variaveis.$cor-selecao;
+        border-color: variaveis.$cor-selecao;
+    }
+
+    &__depoimentos--item {
+        @include mixins.div-arredondada;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input, &__input--mensagem {
+        text-align: center;
+    }
+}

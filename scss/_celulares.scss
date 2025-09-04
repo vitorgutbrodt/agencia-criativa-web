@@ -1,0 +1,48 @@
+@use 'variaveis';
+/*ajustes versao celulares */
+@media (max-width: 600px) {
+    .home {
+        &__lista--item {
+            display: inline-flex;
+            font-size: 1em;
+            padding: calc(variaveis.$espacamento-padrao / 2);
+        }
+    }
+
+    .main {
+        &__servicos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            text-align: center;
+            margin: 10px; 
+        }
+
+        &__button {
+            width: 50%;
+        }
+
+        &__input {
+            margin: calc(variaveis.$margem-padrao / 2);
+            width: 80%;
+            height: 4em;
+        }
+
+        &__input--mensagem {
+            margin: calc(variaveis.$margem-padrao / 2);
+            width: 80%;
+            height: 8em;
+        }
+
+        &__footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;            
+            font-size: 0.7em;
+        }
+    }
+}
+
+
+   
+    

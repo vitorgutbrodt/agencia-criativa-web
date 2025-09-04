@@ -1,0 +1,33 @@
+@use 'variaveis';
+/* ajustes versao para desktop */
+@media (min-width: 901px) {
+   .main {
+        &__servicos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            text-align: center;
+            margin: 10px;
+        }
+
+        &__depoimentos--item {
+            margin-left: 20%;
+            margin-right: 20%;
+            padding: variaveis.$espacamento-padrao;
+        }
+
+        &__input {
+            margin: calc(variaveis.$margem-padrao / 2);
+            width: 50%;
+            height: 2rem;  
+        }
+
+        &__input--mensagem {
+            margin: calc(variaveis.$margem-padrao / 2);
+            height: 5rem;
+            width: 50%;
+        }
+    }
+}
+
+

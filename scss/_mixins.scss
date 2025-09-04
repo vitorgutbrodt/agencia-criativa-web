@@ -1,0 +1,23 @@
+@use 'variaveis';
+
+@mixin div-arredondada {
+    border: 0.1em solid gray;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em;
+    margin: variaveis.$margem-padrao;
+    padding: variaveis.$espacamento-padrao;
+    font-size: 1rem;
+}
+
+@mixin botao {
+    background-color: variaveis.$cor-primaria;
+    color: white;
+    font-weight: bold;
+    border: 0.5em solid variaveis.$cor-primaria;
+    border-radius: 0.5em;
+    margin: variaveis.$margem-padrao;
+    width: 40%;
+    padding: calc(variaveis.$espacamento-padrao / 2);
+    font-size: 1em;
+
+}

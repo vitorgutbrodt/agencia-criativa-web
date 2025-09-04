@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .container-um { /* container do código todo para organização com grid */
     display: grid;
     grid-template-areas: 
@@ -25,6 +27,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-bottom: 1em;
-    margin: 2em;
+    margin-bottom: variaveis.$margem-padrao;
+    margin: calc(variaveis.$margem-padrao * 2);
 }
